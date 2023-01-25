@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/*font-family: 'Poppins', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
+/*font-family: 'Kavoon', cursive; <-para títulos diferentes*/
+html{margin:0;padding:0}
+header{position:relative;margin-bottom:10px;z-index:5000}
+body{background-color:#160830;color:#fff;margin:0;padding:0;font-family: 'Poppins', sans-serif;}
+a{color:#eee;text-decoration:none}
+footer{position:fixed;bottom:0;background-color:#ccc;height:50px;width:100%}
+.logo{padding:5px}
+/* MENU */
+.menu-icon{display:inline-block;cursor:pointer;transition:0.1s}
+.bar1,.bar2,.bar3{width:18px;height:3px;background-color:#017840;margin:3px 0;transition:0.1s}
+.change .bar1{transform:translate(0,6px) rotate(-45deg);background-color:#78c5a1}
+.change .bar2{opacity:0}
+.change .bar3{transform:translate(0,-6px) rotate(45deg);background-color:#78c5a1}
+#icone{cursor:pointer;position:fixed;right:10px;top:7px;z-index:1007}
+#icone:hover{filter:drop-shadow(0 0 1px #fff);transition:0.1s;opacity:1}
+nav{width:100%;top:75px;position:relative}
+nav a{text-decoration:none}
+.menu-bar{background-color:#575390;width:250px;position:fixed;right:0;top:0;bottom:0;display:none;z-index:1006;transition:.3s}
+#menu-check:checked ~ .menu-bar,#menu-check:active ~ .menu-bar{display:block}
+#menu-check{display:none}
+.menu-link{border-bottom:solid 1px #fff;padding:10px 10px;text-align:center;transition:all .1s linear;transition:.3s}
+.mhome{border-top:solid 1px #fff}
+.menu-link:hover{font-size:1.1em}
+.social-menu{display:flex;justify-content:space-between;margin:10px}
+.social-fixo{position:absolute;bottom:10px;width:100%}
+.social-menu img{width:30px;border:3px solid #fff;border-radius:30px}
+input[type="image"]{margin-top:50px;width:60%;left:50%;position:absolute;translatex:-50%;transform:translateX(-50%)}
+/* FIM MENU */
+/* BANNER */
+.banner{position:absolute;width:100%;height:100%;overflow:hidden;top:0}
+.banner-container{position:relative;width:100%;max-height:670px;overflow:hidden;display:none}
+.banner-container a{background-color:#017840;padding:5px 10px;color:#ffffff;position:absolute;bottom:10px;left:10px;border-radius:2px;box-shadow:-1px 1px 2px #000}
+.banner-container a:hover{background-color:#008948}
+.titulo-banner{font-family:'Kavoon', cursive}
+.bannerslide-container{width:100%;max-height:670px;overflow:hidden}
+.banner-container img{width:100%;max-height:670px}
+.fade{animation-name:fade;animation-duration:0.2s}
+@keyframes fade{from{opacity:0.2}to{opacity:1}}
+/* FIM BANNER */
+/* FORMULÁRIO WHATSAPP */
+.form-contato{width:500px;margin:10px auto}
+input,textarea,button{
+  width: 100%;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input,
+textarea {
+  padding: 16px;
+}
+
+input,
+button {
+  height: 40px;
+}
+
+button {
+  cursor: pointer;
+  background-color: #25d366;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  height: 48px;
+}
+
+button img {
+  margin-right: 8px;
+}
+/* FIM FORMULÁRIO WHATSAPP */
+/* RESPONSIVO */
+@media (min-width:890px){.logo img{width:200px}}
+@media (max-width:889px){.logo img{width:180px}}
+@media (max-width:815px){.logo img{width:140px}}
+@media (min-width:641px){.logo2{display:none}}
+@media (max-width:640px){.logo2 img{width:100px}.logo{display:none}}
+@media (max-width:470px){.logo2 img{width:80px}}
+@media (max-width:399px){.menu-bar{width:100%}}
+@media (max-width:375px){.logo2 img{width:60px}}
